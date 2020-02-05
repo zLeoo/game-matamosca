@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Game</title>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	 <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="d-flex justify-content-center">
+				<img src="imagens/game.png">
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<div class="d-flex justify-content-center">
+				<div class="mb-2 mt-2">
+					<select class="form-control" id="niveis">
+						<option value="">-- Selecione o nível --</option>
+						<option value="facil">Fácil</option>
+						<option value="normal">Normal</option>
+						<option value="dificil">Difícil</option>
+						
+					</select>
+				</div>	
+			</div>			
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<div class="d-flex justify-content-center">
+				<button type="button" class="btn btn-primary btn-lg" onclick="iniciaJogo()">Jogar</button>
+			</div>			
+		</div>
+	</div>
+	
+	
+
+
+</div>
+
+
+
+<script>
+	function iniciaJogo(){
+		var nivel = document.getElementById('niveis').value
+		if (nivel === "") {
+			alert('Selecione um nível')
+
+		}else{
+			window.location.href = "game.html?" + nivel
+		}
+	}
+</script>
+</body>
+</html>
